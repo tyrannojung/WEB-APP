@@ -298,7 +298,69 @@ APK 만들기
 	- android 1024x500 배너이미지
 	- adaptive-icon expo실행시이미지 (선택값)
 
-Sns Api 적용
+빌드
+--------------------------------------------------------------------------------------
+
+ - build
+    - ANDROID
+<pre> - expo build:android</pre>
+
+
+    - 빌드과정
+	    - 로그인여부
+		    [x] Log in with an existing Expo account 선택
+
+	    - username : dev.4intel@gmail.com
+	    - password :
+
+    - apk선택
+	    - [x] apk : 기본적은 apk파일   
+	    - [ ] apk-bundle : apk와 비슷하지만 코드, 리소스, cpu 아키텍처와 메타데이터를 압축한 파일
+	    - apk를 만드는것이므로 apk선택 후 엔터
+
+        - pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.apk)
+        - 핸드폰 : expo에서 로그인 후 빌드한 프로젝트를 선택하고 download 후 설치한후 실행한다. 
+
+    - IOS
+        - Mac북 계정 등록 및 알림허용
+            - Apple ID : hs0chae@naver.com
+	                PW : Jakeen2784
+ 
+	<pre> - expo build:ios	</pre>
+
+        - app형식선택
+	    - [x] archive : 실제 배포할수있는 app파일
+	    - [ ] simulator : test app파일
+
+        - Do you have access to the Apple account that will be used for submitting this app to the App Store? › (Y/n) App Store에 실제로 등록할껀지여부를 묻는다. Y선택   
+        - How do you want to validate your account? › device / sms 인증서 device/sms어디로 설정할건지 물어본다.   
+        *** Device 선택후 알림으로 오는 code입력    // 맥북필요***
+        - Would you like to use this certificate? Y선택   
+        - Will you provide your own Apple Push Notifications service key? › - Use arrow-keys. Return to submit.   
+         [x]  Let Expo handle the process expo에서 진행
+         [ ]  I want to upload my own file 직접업로드
+
+        - pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.ipa)
+        - 핸드폰 : 다운로드 미지원
+
+        - 다운받은.ipa 단말기로 전송
+        - https://appstoreconnect.apple.com/apps 접속후 +버튼 클릭후 신규 앱 선택
+        - 플랫폼 : IOS 선택
+            - 이름 : abc-helloworld
+            - 기본언어 : 한국어
+            - 번들id : 최근배포한 ios패키지명선택
+            - Sku : helloworld 앱 고유이름
+            - 사용자 액세스 권한 : 전체액세스선택
+        *** 맥북에 Transporter열어서 앱추가 클릭후 .ipa파일 추가 //맥북필요***
+        - 전송이 완료되면 왼쪽 ios에서 빌드된 app에 수출규정준수를 확인한다.
+        - 전송이 완료되면 해당 프로젝트드를 들어가서 상단에 Testflight탭 클릭
+	    - 외쪽에 내부 테스팅에 테스트할 계정을 등록한다.
+        - 구글계정에 등록된 메일을 확인하면 testflight어플로 연결된후 다운받으면 단말기에 설치된다.
+
+
+ - 상세내용은 bts-app/Documents/IOS빌드 참조
+
+Sns Api 적용 (옵션)
 --------------------------------------------------------------------------------------
 
 준비단계 : 빌드과정까지 완료된 helloworld프로젝트expo fetch:android:hashes
@@ -522,69 +584,6 @@ Sns Api 적용
 
 ```
 - 상세내용은 /Documents/SnS 설정.docx 문서 참조
-
-
-빌드
---------------------------------------------------------------------------------------
-
- - build
-    - ANDROID
-<pre> - expo build:android</pre>
-
-
-    - 빌드과정
-	    - 로그인여부
-		    [x] Log in with an existing Expo account 선택
-
-	    - username : dev.4intel@gmail.com
-	    - password :
-
-    - apk선택
-	    - [x] apk : 기본적은 apk파일   
-	    - [ ] apk-bundle : apk와 비슷하지만 코드, 리소스, cpu 아키텍처와 메타데이터를 압축한 파일
-	    - apk를 만드는것이므로 apk선택 후 엔터
-
-        - pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.apk)
-        - 핸드폰 : expo에서 로그인 후 빌드한 프로젝트를 선택하고 download 후 설치한후 실행한다. 
-
-    - IOS
-        - Mac북 계정 등록 및 알림허용
-            - Apple ID : hs0chae@naver.com
-	                PW : Jakeen2784
- 
-	<pre> - expo build:ios	</pre>
-
-        - app형식선택
-	    - [x] archive : 실제 배포할수있는 app파일
-	    - [ ] simulator : test app파일
-
-        - Do you have access to the Apple account that will be used for submitting this app to the App Store? › (Y/n) App Store에 실제로 등록할껀지여부를 묻는다. Y선택   
-        - How do you want to validate your account? › device / sms 인증서 device/sms어디로 설정할건지 물어본다.   
-        *** Device 선택후 알림으로 오는 code입력    // 맥북필요***
-        - Would you like to use this certificate? Y선택   
-        - Will you provide your own Apple Push Notifications service key? › - Use arrow-keys. Return to submit.   
-         [x]  Let Expo handle the process expo에서 진행
-         [ ]  I want to upload my own file 직접업로드
-
-        - pc : expo사이트 로그인 후 https://expo.dev/accounts/jongnamlim에서 빌드한 프로젝트선택후 Download(.ipa)
-        - 핸드폰 : 다운로드 미지원
-
-        - 다운받은.ipa 단말기로 전송
-        - https://appstoreconnect.apple.com/apps 접속후 +버튼 클릭후 신규 앱 선택
-        - 플랫폼 : IOS 선택
-            - 이름 : abc-helloworld
-            - 기본언어 : 한국어
-            - 번들id : 최근배포한 ios패키지명선택
-            - Sku : helloworld 앱 고유이름
-            - 사용자 액세스 권한 : 전체액세스선택
-        *** 맥북에 Transporter열어서 앱추가 클릭후 .ipa파일 추가 //맥북필요***
-        - 전송이 완료되면 왼쪽 ios에서 빌드된 app에 수출규정준수를 확인한다.
-        - 전송이 완료되면 해당 프로젝트드를 들어가서 상단에 Testflight탭 클릭
-	    - 외쪽에 내부 테스팅에 테스트할 계정을 등록한다.
-        - 구글계정에 등록된 메일을 확인하면 testflight어플로 연결된후 다운받으면 단말기에 설치된다.
-
-
- - 상세내용은 bts-app/Documents/IOS빌드 참조
 
 Google Play & App Store 배포
 --------------------------------------------------------------------------------------
