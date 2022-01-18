@@ -6,7 +6,6 @@
 
 ## ※ Mac
 
-
 homebrew 설치 (설치도구)
 --------------------------------------------------------------------------------------
 1. 설치명령어 실행
@@ -228,7 +227,7 @@ Helloworld
 
 5.  cd 해당프로젝트로 들어간다.
 터미널창에 명령어 입력
-    <pre>
+    	<pre>
 		- cd helloworld
 	</pre>
 	
@@ -286,88 +285,6 @@ export default class App extends React.Component {
 	- 안드로이드
 		- expo어플을 실행 후 Scan Qr Code를 통해 해당 qr코드를 찍으면 앱을 확인할수있다.
 
-
-10. 템플릿 적용시(SNS) 폴더구조 변경
-- Helloworld 업그레이드 폴더구조
-
-- Helloworld프로젝트 폴더구조를 /source/default와 동일하게 맞춰준다.
-
-	1, keys, assets, src, theme, App.js, package.json 붙여넣기
-
-		```
-		Helloworld
-			-Helloworld
-				- .expo-shared  (엑스포 공유파일)
-				- assets (파일저장소(이미지, 폰트, 비디오, 사운드 파일)
-					-fonts
-					-images
-						- adaptive-icon.png // 반응형 앱아이콘이미지
-						- android.png // google스토어 설명 이미지
-						- favicon.png // web에 favicon 이미지
-						- icon.png // 앱아이콘이미지
-						- splash.png // 로딩이미지
-				- keys
-				- node_modules(react module파일)
-				- src
-					- components	(부가 기능들 관련된 컴포넌트)
-						- appstatusbar.js – 상단백그라운드
-						- index.js – 실행파일
-					- navigations(화면 전환과 관련된 컴포넌트)
-						- MainTab.js – 어플 메인구성화면
-						- index.js – 실행파일
-					- screens(어플의 화면 단위 컴포넌트)
-						- Home.js – 홈아이콘클릭시 나타날 화면
-						- index.js – 실행파일
-						- Settings.js- 세팅아이콘클릭시 나타날 화면
-
-				- theme
-					- theme.js (css설정)
-				- App.js(앱 실행시 눈으로 보이는 화면.)
-				- app.json(코드에 속하지 않는 앱의 일부들을 구성)
-				- babel.config.js(환경설정파일)
-				- package-lock.json
-				- package.json
-		```
-		// npm install시 "@react-native-community/masked-view": "0.1.10" 버전이슈 문제로 yarn install로 대체
-		***Package.json 내용 변경시 yarn install로 node_moudle을 업데이트 해준다.***
-
-	2, app.json내용을 프로젝트에 맞게 수정한다.
-	
-		```javascript
-		{
-		  "expo": {
-		    "name": "helloworld", // 앱 이름
-		    "slug": "appSystem",
-		    "version": "1.0.0",
-		    "orientation": "portrait",
-		    "icon": "./assets/images/icon.png", // 앱아이콘
-		    "splash": {
-		      "image": "./assets/images/splash.png", // 첫 로딩 이미지
-		      "resizeMode": "contain",
-		      "backgroundColor": "#2d2e46" // 여백 색
-		    },
-		    "updates": {
-		      "fallbackToCacheTimeout": 0
-		    },
-		    "assetBundlePatterns": ["**/*"],
-		    "ios": {
-		      "bundleIdentifier": "kr.ne.abc.helloworld",  //는패키지명(중복x)
-		      "buildNumber": "1.0.0", // 버전
-		      "supportsTablet": true
-		    },
-		    "android": {
-		      "package": "kr.ne.abc.helloworld",  // 패키지명 (중복x)
-		      "versionCode": 1 // 버전
-		    },
-		    "web": {
-		      "favicon": "./assets/images/favicon.png"
-		    }
-		  }
-		}
-
-		```
-		*** 주석까지 데이터로 인식되므로 지워준다. ***
-
 APK 만들기
 --------------------------------------------------------------------------------------
 
@@ -393,8 +310,8 @@ APK 만들기
 	    - 로그인여부
 		    [x] Log in with an existing Expo account 선택
 
-	    - username dev.4intel@gmail.com
-	    - password abc123ok**
+	    - username : dev.4intel@gmail.com
+	    - password :
 
     - apk선택
 	    - [x] apk : 기본적은 apk파일   
