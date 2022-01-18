@@ -399,6 +399,12 @@ Sns Api 적용 (옵션)
 
 준비단계 : 빌드과정까지 완료된 helloworld프로젝트expo fetch:android:hashes
 
+0. 구글 & 페이스북 모듈 install
+<pre>
+	expo install expo-google-sign-in
+	expo install expo-facebook
+</pre>
+
 1. 해시값 생성 - google에서 기기에 접근하는 해시값
 <pre>
     expo fetch:android:hashes
@@ -577,9 +583,9 @@ Sns Api 적용 (옵션)
        "slug": "appSystem",
        "version": "1.0.0",
        "orientation": "portrait",
-       "icon": "./assets/images/icon.png",
+       "icon": "./assets/icon.png",
        "splash": {
-         "image": "./assets/images/splash.png",
+         "image": "./assets/splash.png",
          "resizeMode": "contain",
          "backgroundColor": "#2d2e46"
        },
@@ -606,7 +612,7 @@ Sns Api 적용 (옵션)
          "googleServicesFile": "./keys/google-services.json", //경로 설정
          "config": {
            "googleSignIn": {
-             "certificateHash": "a4575f81e6d49d7b15a129234ebebf8d50492455" // ./keys/google-services.json certificationHash 값 입력
+             "certificateHash": "a4575f81e6d49d7b15a129234ebebf8d50492455" // ./keys/google-services.json certificate_hash 값 입력
            }
          },
          "versionCode": 1
