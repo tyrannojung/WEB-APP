@@ -471,7 +471,7 @@ Sns Api 적용 (옵션)
     border-top-color: #a4a4a4;
     `;
      
-    const Home = () => {
+    const App = () => {
      
        // 구글 로그인
        useEffect(() => {
@@ -565,7 +565,7 @@ Sns Api 적용 (옵션)
        );
     };
      
-    export default Home;
+    export default App;
 ```
 
 4. app.json 복사
