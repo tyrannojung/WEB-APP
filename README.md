@@ -419,8 +419,9 @@ Sns Api 적용 (옵션)
 3. webview 
 
 ```javascript
-    import styled from "styled-components/native";
-    import { WebView } from "react-native-webview";
+    import React, { useEffect } from 'react';
+    import { WebView } from 'react-native-webview';
+    import styled from 'styled-components/native'
     import * as GoogleSignIn from "expo-google-sign-in";
     import * as Facebook from "expo-facebook";
      
