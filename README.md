@@ -324,7 +324,7 @@ APK 만들기
     - IOS
         - Mac북 계정 등록 및 알림허용
             - Apple ID : hs0chae@naver.com
-	                PW : Jakeen2784
+	                PW : 
  
 	<pre> - expo build:ios	</pre>
 
@@ -614,8 +614,9 @@ Google Play & App Store 배포
 - 핸드폰 : expo에서 로그인 후 빌드한 프로젝트를 선택하고 download 후 섪치한후 실행한다. 
 
   - https://play.google.com/console/developers 접속 및 로그인
-    ID: app.net.4intel@gmail.com
-    PW: 4intel123ok
+    
+    app.net.4intel@gmail.com
+    PW: 
 
   - 앱만들기 버튼클릭
   	- 앱이름 : abc-helloworld
