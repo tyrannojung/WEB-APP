@@ -243,9 +243,10 @@ Helloworld
     - npm install styled-components
     </pre>
 
-7. App.js 수정
+7. App.js & app.json 수정
     - 아래 코드로 App.js를 변경한다.
-
+    - 
+App.js
 ```javascript
 import * as React from 'react'; // 리액트 기본 문법사용 import
 import { WebView } from 'react-native-webview'; // webview 사용을위한 impoirt
@@ -267,6 +268,40 @@ export default class App extends React.Component {
         />
       </SafeContainer>
     );
+  }
+}
+```
+
+app.json
+```
+{
+  "expo": {
+    "name": "앱만들기", // 앱 이름
+    "slug": "appSystem",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png", // 앱아이콘
+    "splash": {
+      "image": "./assets/splash.png", // 첫 로딩 이미지
+      "resizeMode": "contain",
+      "backgroundColor": "#2d2e46" // 여백 색
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "io.nodehome.education",  //는패키지명(중복x)
+      "buildNumber": "1.0.0", // 버전
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "io.nodehome.education",  // 패키지명 (중복x)
+      "versionCode": 1 // 버전
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
   }
 }
 ```
@@ -300,7 +335,6 @@ APK 만들기
 
 빌드
 --------------------------------------------------------------------------------------
-
  - build
     - ANDROID
 <pre> - expo build:android</pre>
