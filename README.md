@@ -274,7 +274,8 @@ export default class App extends React.Component {
 
 app.json
 ```	
-json형식에 맞춰 아래 코드를 추가해준다.
+
+json형식에 맞춰 아래 코드를 추가해준다.(배포시 패키지와 버전이 필수값)
 	ios
 		"bundleIdentifier": "io.nodehome.helloworld0x",  //는패키지명(중복x)
        		"buildNumber": "1.0.0", // 버전
