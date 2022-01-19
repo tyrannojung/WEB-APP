@@ -273,37 +273,14 @@ export default class App extends React.Component {
 ```
 
 app.json
-```
-{
-  "expo": {
-    "name": "helloworld0x", // 앱 이름
-    "slug": "appSystem",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png", // 앱아이콘
-    "splash": {
-      "image": "./assets/splash.png", // 첫 로딩 이미지
-      "resizeMode": "contain",
-      "backgroundColor": "#2d2e46" // 여백 색
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "bundleIdentifier": "io.nodehome.helloworld0x",  //는패키지명(중복x)
-      "buildNumber": "1.0.0", // 버전
-      "supportsTablet": true
-    },
-    "android": {
-      "package": "io.nodehome.helloworld0x",  // 패키지명 (중복x)
-      "versionCode": 1 // 버전
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
-  }
-}
+```	
+json형식에 맞춰 아래 코드를 추가해준다.
+	ios
+		"bundleIdentifier": "io.nodehome.helloworld0x",  //는패키지명(중복x)
+       		"buildNumber": "1.0.0", // 버전
+	android	
+		 "package": "io.nodehome.helloworld0x",  // 패키지명 (중복x)
+      		 "versionCode": 1 // 버전
 ```
 
 8. expo 인터페이스 실행
